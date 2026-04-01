@@ -38,3 +38,13 @@ def get_students(student_grades, keys):
             print(f"{key.title()} not found!")
     return result
 
+def avg_by_student(student_grades, keys=None):
+    # Si no hay keys → todos
+    if keys is None:
+        selected = student_grades
+    else:
+        selected = get_students(student_grades, keys)
+
+    for student, grades in selected.items():
+        avg = sum(grades.values()) / len(grades)
+        print(f"{student}: {round(avg, 1)}")
