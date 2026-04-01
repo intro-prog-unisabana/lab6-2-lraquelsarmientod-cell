@@ -1,13 +1,12 @@
 def show_inventory(inventory):
     print("\nCurrent Inventory:")
-    # FIX 1: usar .items() para iterar correctamente
     for fruit, stock in inventory.items():
         print(f"{fruit}: {stock}")
     print()
 
 def add_fruit(inventory):
     fruit = input("Enter the name of the new fruit: ").strip()
-    # FIX 2: no necesitas .keys()
+    
     if fruit in inventory:
         print(f"{fruit} already exists!\n")
     else:
@@ -18,10 +17,9 @@ def add_fruit(inventory):
 
 def update_stock(inventory):
     fruit = input("Enter the name of the fruit to update: ").strip()
-    # FIX 4: no usar .items()
+    
     if fruit in inventory:
         amount = input(f"Enter amount to add to {fruit}'s stock: ")
-        # FIX 5: convertir a entero antes de sumar
         inventory[fruit] += int(amount)
         print(f"{fruit} stock increased by {amount}.\n")
     else:
@@ -35,7 +33,7 @@ def menu():
     print("4 - Exit")
 
 def run_program():
-    # FIX 6: faltaban comas en el diccionario
+   
     inventory = {
         "apples": 10,
         "bananas": 20,

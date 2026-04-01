@@ -1,6 +1,5 @@
 # Write your code here!
 def employee_print(employee_info):
-    # Sacamos los valores base (o N/A si no existen)
     name = employee_info.get("Name", "N/A")
     salary = employee_info.get("Salary", "N/A")
     role = employee_info.get("Role", "N/A")

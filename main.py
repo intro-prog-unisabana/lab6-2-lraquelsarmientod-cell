@@ -1,5 +1,4 @@
 from grades_manager import *
-
 def main():
     print("Welcome to the Student Grades Manager!\n")
 
